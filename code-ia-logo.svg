@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="150" viewBox="0 0 620 150" role="img" aria-labelledby="title desc">
+<title id="title">Code IA</title><desc id="desc">Logo typographique Code IA</desc>
+<rect x="2" y="9" width="132" height="132" rx="28" fill="#153fff"/>
+<path d="M91 39 A39 39 0 1 0 96 105" fill="none" stroke="#18d66b" stroke-width="11" stroke-linecap="round"/>
+<path d="M70 54 L70 95 M51 75 L90 75" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+<text x="157" y="92" font-family="Arial, Helvetica, sans-serif" font-size="69" font-weight="800" letter-spacing="-3" fill="#ffffff">CODE</text>
+<text x="357" y="92" font-family="Arial, Helvetica, sans-serif" font-size="69" font-weight="900" letter-spacing="-3" fill="#18d66b">IA</text>
+<path d="M160 113 H458" stroke="#18d66b" stroke-width="5" stroke-linecap="round"/>
+</svg>

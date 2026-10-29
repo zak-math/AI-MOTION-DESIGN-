@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07152f">
+  <meta name="description" content="Découvre la formation Code IA pour apprendre à concevoir des vidéos en motion design avec l'intelligence artificielle.">
+  <title>Formation Motion Design avec l'IA — Code IA</title>
+  <style>
+    :root{
+      --navy:#07152f;--navy2:#0b2148;--blue:#153fff;--cyan:#55d9ff;
+      --green:#18d66b;--white:#f8fbff;--ink:#101b32;--muted:#637089;
+      --pale:#eef4ff;--line:#dce5f2;--gold:#d9ff6a
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#fff;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    img,video{max-width:100%}
+    .wrap{width:min(1140px,calc(100% - 40px));margin-inline:auto}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+    .brand{font-weight:950;font-size:1.45rem;letter-spacing:-.065em;color:#fff;display:flex;align-items:center;gap:10px}
+    .brand-logo{display:block;width:150px;height:auto;max-height:42px;object-fit:contain}.footer .brand-logo{width:132px;max-height:36px}
+    .nav-link{font-size:.9rem;color:#d9e6ff;font-weight:750}
+    .nav-btn,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;padding:13px 19px;font-weight:850;border:0;cursor:pointer;transition:transform .18s,filter .18s}
+    .nav-btn{background:var(--green);color:#061b18;font-size:.9rem}
+    .btn:hover,.nav-btn:hover{transform:translateY(-2px);filter:brightness(1.04)}
+    .hero{background:radial-gradient(ellipse at 82% 20%,#153fff55 0,transparent 34%),radial-gradient(ellipse at 8% 85%,#18d66b1b 0,transparent 34%),linear-gradient(135deg,#050d20,var(--navy) 54%,#0b2148);color:#fff;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:46px;align-items:center;padding:52px 0 70px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--green);font-weight:900;font-size:.77rem;text-transform:uppercase;letter-spacing:.13em}
+    .eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 15px #18d66b}
+    h1{font-size:clamp(2.5rem,5vw,4.7rem);line-height:1.02;letter-spacing:-.065em;margin:19px 0 20px}
+    h1 span{color:var(--cyan)}
+    .hero-copy{font-size:1.1rem;color:#d4e1f8;max-width:620px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin:25px 0 16px}
+    .btn-primary{background:var(--green);color:#061b18}
+    .btn-outline{border:1px solid #657ba5;color:#fff;background:#ffffff08}
+    .tiny{font-size:.83rem;color:#b4c4e1}
+    .video-shell{border:1px solid #49618c;border-radius:22px;background:#08152d;padding:9px;box-shadow:0 30px 90px #0008}
+    video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#020815;border-radius:15px}
+    .video-caption{display:flex;justify-content:space-between;gap:12px;color:#dbe6fb;font-size:.82rem;padding:12px 5px 3px}
+    .video-caption span:last-child{color:var(--cyan)}
+    .trust-line{display:flex;flex-wrap:wrap;gap:14px 20px;color:#c7d7f4;font-size:.88rem;margin-top:22px}
+    .trust-line span:before{content:"✓";color:var(--green);font-weight:950;margin-right:7px}
+    .section{padding:78px 0}
+    .soft{background:var(--pale)}
+    .section-head{max-width:760px;text-align:center;margin:0 auto 36px}
+    .kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:950}
+    h2{font-size:clamp(2rem,3.7vw,3.25rem);line-height:1.1;letter-spacing:-.05em;margin:11px 0 16px}
+    .lead{color:var(--muted);font-size:1.06rem}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 12px 34px #0c2b5810}
+    .num{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;background:#e6efff;color:var(--blue);font-weight:950}
+    .card h3{font-size:1.16rem;margin:15px 0 8px}
+    .card p{color:var(--muted);font-size:.96rem;margin:0}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .gallery figure{margin:0;border-radius:18px;overflow:hidden;background:#07152f;box-shadow:0 12px 30px #0b214822}
+    .gallery img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;display:block;transition:transform .3s}
+    .gallery figure:hover img{transform:scale(1.025)}
+    .video-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .video-card{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#07152f;box-shadow:0 12px 30px #0b214822}
+    .video-card video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:0;background:#020815}
+    .video-card-caption{display:flex;flex-direction:column;gap:2px;padding:14px 16px;color:#fff}
+    .video-card-caption span{font-size:.82rem;color:#b9c9e4}
+    .two-col{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:start}
+    .checklist{list-style:none;margin:23px 0;padding:0;display:grid;gap:14px}
+    .checklist li{display:flex;gap:11px;align-items:flex-start}
+    .check{flex:none;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#d9ffe9;color:#075d35;font-weight:950;margin-top:2px}
+    .notice{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);padding:17px 19px;border-radius:0 14px 14px 0;color:#43516b;font-size:.93rem}
+    .course-panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px}
+    .course-panel h3{margin:0 0 16px}
+    .module{padding:15px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:38px 1fr;gap:12px}
+    .module-num{width:34px;height:34px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:900}
+    .module p{margin:4px 0 0;color:var(--muted);font-size:.93rem}
+    .price-section{background:linear-gradient(135deg,#07152f,#0b2148);color:#fff}
+    .price-card{max-width:760px;margin:auto;border:1px solid #3d5682;background:#0b1d3c;border-radius:26px;padding:clamp(26px,5vw,48px);text-align:center;box-shadow:0 24px 80px #0003}
+    .price-card .kicker{color:var(--green)}
+    .old-price{color:#aab9d3;text-decoration:line-through;font-size:1.2rem;font-weight:750}
+    .new-price{font-size:clamp(3rem,7vw,5rem);font-weight:950;letter-spacing:-.07em;line-height:1.1;margin:8px 0}
+    .new-price span{font-size:.36em;letter-spacing:0}
+    .discount{display:inline-block;background:var(--green);color:#062116;font-weight:950;font-size:.78rem;border-radius:999px;padding:6px 11px}
+    .price-card p{color:#d2def2;max-width:570px;margin:15px auto 23px}
+    .price-card .btn{width:min(100%,380px);padding:16px 22px;font-size:1rem}
+    .payment-note{font-size:.8rem!important;color:#aebfdb!important}
+    .faq{max-width:820px;margin:auto;display:grid;gap:11px}
+    details{background:#fff;border:1px solid var(--line);border-radius:15px;padding:17px 20px}
+    summary{cursor:pointer;font-weight:850}
+    details p{margin:11px 0 0;color:var(--muted)}
+    .footer{background:#040b19;color:#b9c7df;padding:28px 0}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+    .footer .brand{font-size:1.2rem}
+    .footer .brand-mark{width:32px;height:32px}
+    .footer small{font-size:.82rem}
+    .sticky{display:none}
+    @media(max-width:850px){.hero-grid,.two-col{grid-template-columns:1fr;gap:30px}.hero-grid{padding:38px 0 48px}.cards{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.video-gallery{grid-template-columns:1fr}.section{padding:60px 0}.nav-link{display:none}}
+    @media(max-width:520px){.wrap{width:min(100% - 28px,1140px)}.nav{padding:13px 0}.brand{font-size:1.25rem}.nav-btn{padding:10px 12px;font-size:.8rem}.gallery{grid-template-columns:1fr 1fr;gap:10px}.hero-copy{font-size:1rem}.sticky{display:block;position:fixed;z-index:20;left:12px;right:12px;bottom:12px;text-align:center;padding:15px 18px;border-radius:999px;background:var(--green);color:#061b18;font-weight:950;box-shadow:0 8px 30px #0004}.footer{padding-bottom:85px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <section class="hero" id="top">
+    <header class="wrap nav">
+      <a class="brand" href="#top" aria-label="Code IA, accueil"><img class="brand-logo" src="assets/code-ia-logo-officiel.webp" alt="Logo Code IA"></a>
+      <a class="nav-link" href="#programme">Le programme</a>
+      <a class="nav-btn" href="https://smiley-design-academy.mymaketou.shop/products/transforme-tes-idees-en-videos-publicitaires-professionnelles-grace-a-lia/checkout">Accéder à la formation ↗</a>
+    </header>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Formation pratique · Motion Design IA</div>
+        <h1>Transforme tes idées en vidéos <span>publicitaires avec l’IA.</span></h1>
+        <p class="hero-copy">Découvre une méthode pour structurer tes idées, préparer tes scènes et créer des animations visuelles en t’appuyant sur l’intelligence artificielle et les outils adaptés à ton workflow.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://smiley-design-academy.mymaketou.shop/products/transforme-tes-idees-en-videos-publicitaires-professionnelles-grace-a-lia/checkout">Je rejoins la formation <span>→</span></a>
+          <a class="btn btn-outline" href="#programme">Découvrir le contenu</a>
+        </div>
+        <div class="trust-line"><span>Formation en ligne</span><span>Prix : 10 000 FCFA</span><span>Accès via Marketou</span></div>
+      </div>
+      <div class="video-shell">
+        <video controls playsinline preload="metadata" aria-label="Vidéo de présentation de la formation Code IA">
+          <source src="assets/video-principale.mp4" type="video/mp4">
+          Ton navigateur ne peut pas lire cette vidéo.
+        </video>
+        <div class="video-caption"><span>Découvre la formation en vidéo</span><span>CODE IA / MOTION DESIGN</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <section class="section" id="realisations">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Réalisations Code IA</div>
+          <h2>Découvre aussi nos autres créations vidéo.</h2>
+          <p class="lead">Regarde ces exemples de réalisations pour mieux visualiser les formats et les univers créatifs présentés par Code IA.</p>
+        </div>
+        <div class="video-gallery">
+          <article class="video-card">
+            <video controls playsinline preload="metadata" aria-label="Réalisation vidéo Code IA numéro 2">
+              <source src="assets/realisation-video-02.mp4" type="video/mp4">
+              Ton navigateur ne peut pas lire cette vidéo.
+            </video>
+            <div class="video-card-caption"><strong>Réalisation vidéo 02</strong><span>Motion design / IA</span></div>
+          </article>
+          <article class="video-card">
+            <video controls playsinline preload="metadata" aria-label="Réalisation vidéo Code IA numéro 3">
+              <source src="assets/realisation-video-03.mp4" type="video/mp4">
+              Ton navigateur ne peut pas lire cette vidéo.
+            </video>
+            <div class="video-card-caption"><strong>Réalisation vidéo 03</strong><span>Création vidéo</span></div>
+          </article>
+          <article class="video-card">
+            <video controls playsinline preload="metadata" aria-label="Réalisation vidéo Code IA numéro 4">
+              <source src="assets/realisation-video-04.mp4" type="video/mp4">
+              Ton navigateur ne peut pas lire cette vidéo.
+            </video>
+            <div class="video-card-caption"><strong>Réalisation vidéo 04</strong><span>Création vidéo</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Imagine ce que tu peux créer</div>
+          <h2>Le motion design assisté par l’IA ouvre de nouvelles possibilités créatives.</h2>
+          <p class="lead">Apprends à organiser tes idées et à les transformer en contenus animés pour présenter un produit, raconter une histoire ou communiquer autour d’une activité.</p>
+        </div>
+        <div class="gallery">
+          <figure><img src="assets/motion-design-ia.webp" alt="Visuel Code IA consacré au motion design avec l'intelligence artificielle" loading="lazy"></figure>
+          <figure><img src="assets/studio-creatif-ia.webp" alt="Studio créatif et outils d'intelligence artificielle" loading="lazy"></figure>
+          <figure><img src="assets/code-ia-creations.webp" alt="Créations visuelles Code IA" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section soft">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">La méthode</div>
+          <h2>Ne pars plus de zéro devant une idée de vidéo.</h2>
+          <p class="lead">Une création bien structurée commence par un message, se poursuit par une préparation claire et avance scène après scène.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="num">01</div><h3>Préparer le concept</h3><p>Clarifie l’objectif de ta vidéo et organise les idées à transmettre avant de passer à la création.</p></article>
+          <article class="card"><div class="num">02</div><h3>Structurer les scènes</h3><p>Prépare les instructions et les étapes de travail pour donner une direction cohérente à ton projet.</p></article>
+          <article class="card"><div class="num">03</div><h3>Construire la vidéo</h3><p>Découvre comment utiliser les outils d’IA dans un workflow de motion design, de la préparation à la finalisation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="programme">
+      <div class="wrap two-col">
+        <div>
+          <div class="kicker">Dans la formation</div>
+          <h2>Un parcours pour comprendre le processus de création.</h2>
+          <p class="lead">La formation est pensée pour t’aider à découvrir les différentes étapes d’un projet motion design avec l’IA et à les appliquer à tes propres idées.</p>
+          <div class="notice">Le détail ci-contre présente les grands axes de travail. Vérifie les contenus et modalités d’accès indiqués sur la page Marketou avant de régler ton inscription.</div>
+        </div>
+        <div class="course-panel">
+          <h3>Les axes abordés</h3>
+          <div class="module"><div class="module-num">1</div><div><strong>Le workflow de création de A à Z</strong><p>Préparation du projet, organisation des scènes, choix des outils et étapes de finalisation.</p></div></div>
+          <div class="module"><div class="module-num">2</div><div><strong>Utiliser l’IA pour préparer son projet</strong><p>Structurer les idées et préparer des instructions plus claires, notamment avec Claude selon le workflow enseigné.</p></div></div>
+          <div class="module"><div class="module-num">3</div><div><strong>Passer de l’idée à une vidéo animée</strong><p>Observer une démarche de création et comprendre comment l’adapter à un sujet personnel ou professionnel.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="wrap two-col">
+        <div>
+          <div class="kicker">Pour qui ?</div>
+          <h2>Pour celles et ceux qui veulent développer leur créativité.</h2>
+          <p class="lead">Que tu souhaites enrichir tes contenus ou explorer une nouvelle compétence, le motion design IA peut devenir un outil supplémentaire dans ton parcours créatif.</p>
+        </div>
+        <ul class="checklist">
+          <li><span class="check">✓</span><span><strong>Créateurs de contenu</strong><br>Pour imaginer des formats vidéo plus dynamiques.</span></li>
+          <li><span class="check">✓</span><span><strong>Entrepreneurs et commerçants</strong><br>Pour mieux présenter une activité, une offre ou un produit.</span></li>
+          <li><span class="check">✓</span><span><strong>Graphistes débutants</strong><br>Pour explorer l’animation et compléter leurs compétences visuelles.</span></li>
+          <li><span class="check">✓</span><span><strong>Étudiants et débutants</strong><br>Pour apprendre une méthode créative et pratiquer sur leurs propres projets.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Avant de te décider</div>
+          <h2>Une offre claire, un tarif affiché.</h2>
+          <p class="lead">Consulte les informations de la formation, puis passe à la page Marketou pour vérifier les modalités et effectuer ton inscription.</p>
+        </div>
+        <div class="gallery">
+          <figure><img src="assets/affiches-code-ia.webp" alt="Exemples d'affiches et de créations visuelles Code IA" loading="lazy"></figure>
+          <figure><img src="assets/motion-design-ia.webp" alt="Création motion design avec l'IA par Code IA" loading="lazy"></figure>
+          <figure><img src="assets/studio-creatif-ia.webp" alt="Environnement de création visuelle assistée par l'IA" loading="lazy"></figure>
+          <figure><img src="assets/code-ia-creations.webp" alt="Affiche promotionnelle Code IA" loading="lazy"></figure>
+          <figure><img src="assets/idees-creatives.webp" alt="Visuel créatif Code IA sur la création avec l'IA" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section price-section" id="inscription">
+      <div class="wrap">
+        <div class="price-card">
+          <div class="kicker">Formation Code IA</div>
+          <h2>Prêt·e à explorer le motion design avec l’IA ?</h2>
+          <p>Découvre la formation et les conditions d’accès sur la page de paiement avant de confirmer ton inscription.</p>
+          <div class="old-price">20 000 FCFA</div>
+          <div class="new-price">10 000 <span>FCFA</span></div>
+          <div class="discount">Prix réduit</div>
+          <p>Un tarif de 10 000 FCFA pour accéder à la page d’inscription de la formation.</p>
+          <a class="btn btn-primary" href="https://smiley-design-academy.mymaketou.shop/products/transforme-tes-idees-en-videos-publicitaires-professionnelles-grace-a-lia/checkout" target="_blank" rel="noopener noreferrer">M’inscrire maintenant ↗</a>
+          <p class="payment-note">Le bouton ouvre ta page de paiement Marketou. Vérifie le nom de l’offre, le tarif et les modalités affichées avant de payer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Questions fréquentes</div><h2>Tu veux en savoir plus ?</h2></div>
+        <div class="faq">
+          <details><summary>Quel est le prix de la formation ?</summary><p>Le tarif affiché ici est de 10 000 FCFA, au lieu de 20 000 FCFA. La page Marketou est la référence à vérifier au moment du paiement.</p></details>
+          <details><summary>À qui s’adresse cette formation ?</summary><p>Elle s’adresse notamment aux créateurs de contenu, entrepreneurs, commerçants, graphistes débutants et étudiants qui souhaitent explorer le motion design avec l’IA.</p></details>
+          <details><summary>Faut-il déjà être un expert en motion design ?</summary><p>La page présente la formation aux personnes qui souhaitent apprendre le processus. Consulte la description sur Marketou pour vérifier les prérequis et les modalités exactes.</p></details>
+          <details><summary>Comment accéder à la formation après l’achat ?</summary><p>Les modalités d’accès et de livraison sont celles indiquées par le vendeur sur Marketou au moment de l’inscription. Vérifie-les avant de confirmer le paiement.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="#top" aria-label="Code IA, accueil"><img class="brand-logo" src="assets/code-ia-logo-officiel.webp" alt="Logo Code IA"></a>
+      <small>© <span id="year"></span> Code IA · Formation Motion Design avec l’IA</small>
+    </div>
+  </footer>
+  <a class="sticky" href="https://smiley-design-academy.mymaketou.shop/products/transforme-tes-idees-en-videos-publicitaires-professionnelles-grace-a-lia/checkout" target="_blank" rel="noopener noreferrer">J’en profite</a>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
